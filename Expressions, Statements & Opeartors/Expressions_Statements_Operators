@@ -1,0 +1,69 @@
+Expression
+    -> 1 + 2
+
+Statment
+    -> let sum = 1 + 2
+
+Opeartors 
+    -> Arithmetic Operators
+    -> Assignment Opeartors
+    -> Comparison Operators
+    -> Logical Operators
+
+
+Arithmetic Operators
+    ->  " +, -, *, /, %, ** (exponent), ++, -- "
+note: these all Operators are working from left to right in normal cases
+    -> let result = 4 + 5 – 1 * 3 / 2  
+
+Operator Percedent
+    1. ( )
+    2. ++, --
+    3. *, /, %
+    4. +, -
+
+    
+String Concatenation (use '+' sign)
+    -> 1 + 1        // 2
+       'a' + 'b'    // "ab"
+       1 + 'a'      // "1a"
+       
+
+Assignment Opeartors ( +=, -=, *=, /=, %=)
+    -> let num = 2
+       num += 3     // num = num + 3 
+
+    -> let a = b = c = 5      // a = b, b = c, c = 5
+
+
+Comparison Operators ( ==, ===, !=, !==, >, <, >=, <=)
+    "1" == 1    // true
+    "1" === 1   // false
+    "1" != 1    // false
+    "1" !== 1   // true
+    123 > 456   // true
+    "123" > 456 // false
+    "" > 1      // false
+ 
+
+Logical Operators ( &&, ||, ! )
+
+AND *           1 * 0   // 0    false
+                1 * 1   // 1    true
+                0 * 0   // 0    false
+
+OR  +           true + true   // true
+                true + false  // true    
+
+NOT reverse
+                !true    // false
+                !false   // true
+
+    
+    num = 2
+    num++       // 2
+    num++ ?     // 3
+    ++num       // 3
+    num--       // 2
+    num-- ??    // 1
+    --num       // 1

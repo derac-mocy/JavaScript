@@ -1,0 +1,90 @@
+
+Proceudre   -> set of statements by using { }
+->  add {
+        let a = 1;
+        let b = 2;
+        print a + b;
+    }
+
+    add()   // 3
+
+Functions   -> like Proceudre but it can handle parameters & return result
+->  function add(x, y) {
+        let a = x
+        let b = y
+        return a + b
+    }
+    let result = add(2, 3)      // result = 5
+
+
+Default parameter Value
+->  function add(x, y = 0) {
+        return x + y
+    }
+    add(1, 2)       // 3
+    add(1)          // 1
+
+
+Rest parameter Value
+->  function add(x, y, ..z) {
+        console.log(z)
+    }
+    add(1,2,3,4,5)  // c = [3, 4, 5]
+
+
+Function Expression
+->  let greet = function greeting() {
+        console.log("Hello World")
+    }
+    greet()     // "Hello World"
+
+
+
+Anonymous/ Nameless Function
+-> let greet = function() {
+        console.log("Hello World")
+    }
+    greet()     // "Hello World"
+
+
+Immediately Invoked Function Expression (IIFE)
+->  (function() {
+        console.log("Hello World")
+    })()        // "Hello World"
+
+
+Callback Function
+->  function twice(num, fun) {
+        let result = fun(num)
+        return result * 2
+    }       
+
+    twice(2, function(x) {
+        return x + 1
+    })      // 6
+
+
+Arrow Function
+-> let hello = () => "Hello World"
+-> let hello = _ => "Hello World"
+-> let twice = (n, f) => f(n) * 2       <- rewrite previous callback function 
+
+
+Function hoisting/ Lifting      
+->  add(2, 3)                       
+
+    function add(a, b) {
+        return a + b
+    }
+
+
+
+function Expression         let sum = fun...
+Anonymous function          function() {}
+function with parameters    function fun_name(a, b)      fun_name(1, 2)
+Rest parameters             function fun_name(a, b, ...c)   fun_name(1,2,3,4,5)
+IIFE                        (function(){})()
+callback
+
+
+

@@ -1,0 +1,58 @@
+Statically Typed Lanaguage (C)   -> Static
+Loosely Typed Lanaguage (JS)     -> Dynamic
+
+
+Basic/ Primitive Data Types (Scala Type)
+    -> Character (-)    
+    -> Number   -> Integer  -> Signed Int & Unsigned Int  -> Float  -> Double  -> Long
+    -> Boolean 
+    -> String 
+
+Other Data Types 
+    -> undefined
+    -> null
+    -> NaN
+
+
+Compound Data Type
+    -> array
+
+Structured Data Type
+    -> Object
+
+
+
+JS can handle Type Juggling !
+    -> automatically convert data type according to the input
+
+
+JS can also handle Type Coercion ! 
+    -> automatically adjust the data types when comparing two vars
+
+
+
+Escape character in String
+    -> let time = '3 O\' Clock'
+
+
+Template String
+    -> let name = "Bob"
+       let greet = `Hello ${name}`          // Hello Bob
+
+
+Undefined, null, NaN
+    -> let num1             // undefined
+       let num2 = 1         // Number
+       let num3 = null      // null
+       num1 + num2          // NaN
+
+
+Falsy Values
+    -> 0
+    -> ""  empty String
+    -> null
+    -> undefined
+    -> NaN
+
+PS: others are all Truthy Value
+
