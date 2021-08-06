@@ -1,0 +1,71 @@
+Single Threaded (JS)
+Multi Threaded
+
+3 components in Asynchornous
+- message queue
+- frame stack
+- event loop
+
+
+
+setTimeout(callback_function, time)/ setInterval(callback_function, time)    ***
+->  console.log(1)
+    console.log(2)
+    setTimeout(() => console.log(3)), 1000)
+    console.log(4)
+
+
+
+
+
+Asynchornous JS by using JS standard object "Promise" ***
+->  function add1000() {
+        let result = 0
+
+        for(let i = 1; i <= 1000; i++) {
+            result++
+        }
+        return result
+    }
+
+    function add1000Later() {
+        return new Promise( (resolve, reject) => {
+            let result = add1000()
+
+            if(result)  resolve(result)
+            else    reject()
+        }) 
+    }
+
+    console.log(1)
+    console.log(2)
+    add1000Later()
+        .then( result => result + 1000 )
+        .then( result => console.log(result))
+        .catch( () => console.log("Error") )
+    console.log(4)
+
+
+
+
+
+Asynchornous JS by using Async & Await methods  ***
+->  function add1000() {
+        let sum = 0
+
+        for(let i = 1; i <= 1000; i++) {
+            sum++
+        }
+        return sum
+    }
+
+    async function add1000Later() {
+        let result = await add1000()
+        console.log(result)
+    }
+
+    console.log(1)
+    console.log(2)
+    add1000Later()
+    console.log(4)
+

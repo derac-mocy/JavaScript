@@ -1,0 +1,27 @@
+covidInfo() by using Promise    ***
+
+->  fetch("https://api.covid19api.com/summary")
+        .then( res => res.json() )
+        .then( data => {
+            const GLOBAL = data.Global 
+            const allCountries = data.Countries
+            const MYANMAR = allCountries.find( c => c.Country === "Myanmar" )
+
+            console.log("Global:", GLOBAL, "Myanmar:", MYANMAR)
+        })
+
+
+
+covidInfo() by using Async & Await  ***
+->  async function covidInfo() {
+        const response = await fetch("https://api.covid19api.com/summary")
+        const data = await response.json()
+
+        const GLOBAL = data.Global 
+        const allCountries = data.Countries
+        const MYANMAR = allCountries.find( c => c.Country === "Myanmar" )
+
+        console.log("Global:", GLOBAL, "Myanmar:", MYANMAR)
+    }
+
+    covidInfo()

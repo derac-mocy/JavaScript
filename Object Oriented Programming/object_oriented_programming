@@ -1,0 +1,124 @@
+Imperative programming      
+Object Orieted programming
+Procedural programming
+Functional programming  
+
+
+Public properties & methods ***
+    class Car = {
+        color = "Yellow"
+        wheels = 4
+        drive() {
+            console.log("The car is driving")
+        }
+    }
+
+    let toyota = new Car
+    toyota.wheels       // 4
+    toyota.color       // "Yellow"
+    toyota.drive()      // "The car is driving"
+
+
+
+Access Control Modifier ***
+    - private
+    - public
+    - protected
+    - const
+
+
+
+Static properties & methods ***
+    class Calculator {
+        static PI = 3.14
+        add(a, b) {
+            return a + b
+        }
+    }
+
+    Calculator.PI           // 3.14 
+    Calculator.add(1, 2)    // 3
+    let casino = new Calculator
+    casino.PI               // err
+    casino.add(1, 3)        // 4
+
+
+
+
+Private properties & methods (Encapsulation) *** 
+    class Car {
+        #hp = 150
+        color = "Red"
+        static info() {
+            return `This car has ${this.#hp} horse power`
+        }
+    }
+
+    let toyota = new Car
+    toyota.hp       // Error: Cannot access private property
+    Car.hp          // Horse Power: 150
+    toyota.color    // "Red"
+    Car.info()      // "This car has 150 horse power"
+    toyota.info()   // Error: Cannot access private property
+
+Note:: JS has only 'static' keyword. In case to use 'private' keyword, use '#' instead. Among em', 
+       'public' keyword doesn't use at all
+
+
+
+
+Constructor ***
+    class Dog {
+        constructor(name) {
+            this.name = name
+        }
+        
+        run() {
+            console.log(`${this.name} is running...`)
+        }
+    }
+
+    let dog1 = new Dog("Rocky")
+    let dog2 = new Dog("Rambo")
+    dog1.run()      // "Rocky is running…"
+    dog2.run()      // "Bobby is running…"
+
+
+
+Inheritance ***
+    class Animal {
+        constructor(name) {
+            this.name = name
+        }
+
+        run() {
+            console.log(`${this.name} is running ...)
+        }
+    }
+
+    class Dog extends Animal {
+        bark() {
+            console.log(`${this.name}: Woof woof ...`)
+        }
+    }
+
+    class Cat extends Animal {
+        constructor(name, color) {
+            super(name)     *** // using super() can call the parent constructor
+            this.color = color
+        }
+
+        meow() {
+            console.log(`${this.name}: Meow meow ...`)
+        }
+    }
+
+    let dog = new Dog("Ramboo")
+    let cat = new Cat("Shwe Wah", "Yellow")
+    dog.run()       // Ramboo is running ... 
+    dog.bark()      // Ramboo: Woof.. woof ...
+    cat.meow()      // Shwe War: Mewo.. meow ...
+
+Note:: JS don't accept Multiple Inheritance. 
+       It means one child class can inherit only one class at one time.
+

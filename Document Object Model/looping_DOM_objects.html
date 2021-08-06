@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping DOM Objects</title>
+</head>
+<body>
+    <ul></ul>
+    <script>
+        let fruits = ["apple", "orange", "banana"]
+        let ul = document.querySelector("ul")
+        fruits.forEach(fruit => {
+            let li = document.createElement("li")
+            li.textContent = fruit
+            ul.appendChild(li)
+        });
+
+        let items = document.querySelectorAll("ul > li")
+
+        for(li of items) {
+            console.log(li.textContent)
+        }
+    </script>
+</body>
+</html>

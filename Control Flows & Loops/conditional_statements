@@ -1,0 +1,85 @@
+Conditional Statements
+
+->  if(condition) {
+        // if true, do this statement
+    } else {
+        // if false, do this statements
+    }
+
+
+
+If else statement   ***
+
+->  let nums = [1, 3, 5, 7, 9, 12, 15]
+    let result = nums.map(n => 
+        if(n = 5)  n += 10
+        return n 
+    ) 
+
+
+
+->  let user = [
+                { name: "Bob", age: 44, gender: 'M' },
+                { name: "Alice", age: 22, gender: 'f' },
+                { name: "David", age: 33, gender: 'm' },
+            ]
+    
+    let result = user.map( function(person) { 
+            if(person.gender === 'M' || person.gender === 'm') {
+                person.gender = "Male"
+            } else if {
+                person.gender = "Female"
+            } else {
+                person.gender = "Unknown"
+            }
+            return person
+    })
+
+
+
+
+Switch statement    ***
+->  switch(condition/expression) {
+        case 0: statement    
+                break
+        case 1: statement    
+                break
+        case 2: statement    
+                break
+        case 3: statement    
+                break
+        default: statement
+    }
+
+->  let user = [
+                { name: "Bob", age: 44, gender: 'M' },
+                { name: "Alice", age: 22, gender: 'f' },
+                { name: "David", age: 33, gender: 'm' },
+            ]
+
+    let result = users.map( person => 
+        switch(person.gender) {
+            case 'm': 
+            case 'M': person.gender = "Male"
+                        break
+            case 'f': 
+            case 'F': person.gender = "Feale"
+                        break
+            default: person.gender = "Unknown"
+        }
+        return person
+    )
+
+
+Conditional Expression with Ternary Operator
+->  Condition ? Do_This_If_True: Do_This_If_False
+
+->  let user = { name: "Bob", age: 17 }
+    user.status = user.age >= 18 ? "authorized" : "unauthorized"
+
+
+
+
+
+
+

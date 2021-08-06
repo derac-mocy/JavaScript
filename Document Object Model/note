@@ -1,0 +1,81 @@
+Browser Standard Objects ***
+- windows
+- navigator
+- document
+
+
+Useful Standard DOM Objects' Methods ***
+
+Selectors --->
+    ->  document.getElementByID("#id_name")
+    ->  document.getElementByTagName("html_element_name")
+    ->  document.getElementByClassName("#class_name")
+    ->  document.querySelector("")
+    ->  document.querySelectorAll("p.name/ div.box/ etc")
+
+
+Methods --->
+    ->  selector.textContent = ""
+    ->  selector.innerHTML = ""
+    ->  selector.appendChild("")
+    ->  selector.insertBefore(var_name, var_name.firstChild)
+    ->  selector.createElement("")
+    ->  selector.createTextNode("")
+    ->  selector.remove()
+    ->  selector.setAttribute("attr_name", "attr_value")
+    ->  selector.getAttribute("attr_name")
+    ->  selector.removeAttribute("attr_name)
+    ->  selector.classList.add("class_name", "class_value")
+    ->  selector.classList.remove("class_name")
+    ->  selector.classList.toggle("class_name")
+    ->  selector.cloneNode(true, false)    
+    ->  selector.parentNode()
+    ->  selector.value()    
+    ->  paseInt(var_name)
+
+
+Examples ***
+    ->  document.querySelector("#box").textContent("Hello <b>DOM</b>")      // Hello <b>DOM</b>
+
+    ->  document.querySelector("#box").innerHTML("Hello <b>DOM</b>")        // Hello DOM
+
+    ->  let hello = document.createTextNode("Hello DOM")
+        document.querySelector("#box").appendChild("hello")
+
+    ->  let hello = document.createElement("b")
+        hello.textContent("Hello DOM")
+        let box = document.querySelector("#box")
+        box.appendChild(hello)
+        box.insertBefore(hello, box.firstChild)
+
+    ->  document.querySelector("div").remove
+
+    ->  hello.setAttribute("title", "A new Element")
+
+    ->  hello.classList.add("alert", "Info")
+
+    ->  let hi = hello.cloneNode(true)
+
+    ->  <p>Hello DOM 
+            <span id="badge">@smiley_face<span>
+        <p>
+
+        let badge = document.querySelector("#badge).parentNode()    // badge = p
+
+
+Event Listener --->
+    ->  <button onClick="start()">Start</button>
+        function start() {
+            // statements
+        }
+
+
+    ->  document.querySelector("hello").addEventListener( e => {
+            hello.textContent("Hi DOM")
+        })
+
+    
+    ->  document.querySelector("hello").onclick( e => {
+            hello.textContent("Hi DOM")
+        })
+

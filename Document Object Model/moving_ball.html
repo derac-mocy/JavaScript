@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Ball with DOM</title>
+    <style>
+        #box {
+            position: relative;
+            width: 800px;
+            height: 20px;
+            padding: 5px;
+            background-color: skyblue;
+            border: 5px solid blue;
+
+        }
+
+        #ball {
+            position: absolute;
+            top: 10;
+            left: 10;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="ball"></div>
+    </div>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    
+    <script>
+        let ball = document.querySelector('#ball');
+        let direction = "right";
+        let left = 0;
+
+        function move() {
+            if(direction == "right") {
+                left += 10
+                if(left > 790) direction = "left"
+            } else {
+                left -= 10
+                if(left < 10) direction = "right"
+            }
+            ball.style.left = `${left}px`;
+        }
+
+        function start() {
+            interval = setInterval(move, 10)
+        }
+
+        function stop() {
+            clearInterval(interval);
+        }
+    </script>
+</body>
+</html>

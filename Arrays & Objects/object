@@ -1,0 +1,93 @@
+Object -> Structured or Compound Data Type
+       -> every obj has methods & sometimes properties
+
+    Object Constructor
+    -> let obj = new Object_Name("   ")
+
+    Object Literal
+    -> let obj = {  }
+    -> let cat = { color: "Yellow", legs: 4, }      <= trailing comma included
+
+
+Dot Operator
+->  let cat = {
+                color: "Yellow",
+                name: "Shwe Wah",
+                legs: 4,
+            }
+    cat.legs                    // 4
+    cat["color"] = "Orange"     // color: "Orange"
+
+
+->  let user = {
+                name: "Bob",
+                age" 44,
+            }
+    function greeting(name, age) {
+        return `Hello ${name}, your age is ${age} years old`
+    }
+    greeting(...user)           // Hello Bob, you are 22 years old
+    
+    let [name, age] = user      // name = "Bob", age = 44
+
+
+
+Object's method expression
+-> to handle object's properties & methods, using "this" keyboard
+    let user = {
+                name: "Bob",
+                age: 44,
+                hello: function() {
+                    return `Hello, I'm ${this.name}`
+                }
+            }
+    user.hello()           // "Hello, I'm Bob"
+
+
+
+Property Shorthand
+->  let name = "Alice"
+    let age = 22
+    let user = {
+                name : name,
+                age : age,
+            }
+    let user = { name, age }    <= 
+
+
+Data Structures
+    -> other programming lanaguages use linked list, stacks, queues, trees, graph
+    -> but in JS, combine the JS standard objects to create different data Structures
+
+Object Array
+    ->  let user = {
+                    name: "Bob",
+                    age: 44,
+                    education: [
+                        "B.SC",
+                        "MBA",
+                    ]
+                }
+
+Array Object
+    ->  let users = [
+                        { name: "Bob", age: 44, gender: 'M' },
+                        { name: "Alice", age: 22, gender: 'F' },
+                        { name: "David", age: 33, gender: 'M' },
+                    ]
+            
+        users.map( i => i.name )                // ["Bob", "Alice", "David"]
+        users.filter( i => i.gender === `M' )   // [ {name: "Bob", age: 22, gender: "Male" }, 
+                                                     {name: "Zack", age: 24, gender: "Female" } ]
+
+
+JavaScript Object Notation (JSON)
+    -> JSON.stringfy(var_name)     => convert JS object into JSON string*
+    -> JSON.parse(var_name)        => convert JSON string into JS object
+
+    let user = { name: "Bob", age: 44 }
+    JSON.stringfy(user)     // JSON string -> '{ "name": "Bob", "age": 44 }'
+
+    let user = '{ "name": "Bob", "age": 44 }'
+    JSON.parse(user)        // JS object -> { name: "Bob", age: 44}
+
