@@ -1,0 +1,59 @@
+(input) High level langauge  =>  (output)  Low level langauge
+Source code  =>  Native code
+
+
+Compiler (C, C#)
+Source code -> Compiler -> Intermediate Code -> Native code  (No Platform independent)
+
+
+Interpreter( JS, PHP, Lua)
+Source code -> Interpreter -> Byte Code -> VM (JVM (virtual machine)/ CLR (Common Language Runtime)/ MSIL) 
+
+
+Virtual machine (Java, C++, .net)
+    (input) byte code -> VM -> native code (output)
+
+    Scala, Kotlin
+        -> Java byte code + meta data
+        -> JVM 
+        -> native code 
+
+
+    JPython -> Java , JVM
+    CPython -> C , CLR
+    Cython -> C
+    IronPython -> .net, MSIL
+
+
+Type of Virtual machine 
+    -> Stack Based
+    -> Registar Based
+
+
+Transpiler
+    (input) High level langauge  =>  (output) High level langauge
+
+    TypeScript  ->  JS' supersub
+    ECMA6       ->  ECMA5
+
+
+JIT/ AOT compiler
+    Hotspot compilation (Java)
+    Just in Time compilation - JIT (PHP)
+    Ahead of Time - AOT (flutter, dart)
+
+
+
+PS:: Intermediate code cannot be executed !
+     Meanwhile Byte code can be on VM or Interpreter. 
+
+
+
+
+
+
+
+
+
+
+
