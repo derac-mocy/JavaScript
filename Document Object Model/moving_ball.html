@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moving Ball with DOM</title>
+    <title>Ball</title>
     <style>
         #box {
             position: relative;
             width: 800px;
-            height: 20px;
-            padding: 5px;
-            background-color: skyblue;
-            border: 5px solid blue;
-
+            height: 40px;
+            background-color: cornflowerblue;
+            border: royalblue solid 5px;
         }
 
         #ball {
             position: absolute;
-            top: 10;
-            left: 10;
+            top: 10px;
+            left: 10px;
             width: 20px;
             height: 20px;
             border-radius: 20px;
@@ -33,30 +31,37 @@
     </div>
     <button onclick="start()">Start</button>
     <button onclick="stop()">Stop</button>
-    
+
     <script>
-        let ball = document.querySelector('#ball');
-        let direction = "right";
-        let left = 0;
+        let ball = document.querySelector('#ball')
+        let left = 0
+        let direction = "right"
+
+        let interval = setInterval(move, 10)
 
         function move() {
-            if(direction == "right") {
-                left += 10
-                if(left > 790) direction = "left"
+            if(direction === "right") {
+                left += 1
+                if(left > 770) {
+                    direction = "left"
+                }   
             } else {
-                left -= 10
-                if(left < 10) direction = "right"
+                left -= 1
+                if(left < 10) {
+                    direction = "right"
+                }
             }
-            ball.style.left = `${left}px`;
+            ball.style.left = `${left}px`
         }
 
         function start() {
-            interval = setInterval(move, 10)
+            interval = setInterval( move, 10)
         }
 
         function stop() {
-            clearInterval(interval);
+            clearInterval(interval)
         }
+
     </script>
 </body>
 </html>

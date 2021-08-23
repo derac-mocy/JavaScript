@@ -1,6 +1,6 @@
 Browser Standard Objects ***
 - windows
-- navigator
+- navigator     
 - document
 
 
@@ -18,7 +18,7 @@ Methods --->
     ->  selector.textContent = ""
     ->  selector.innerHTML = ""
     ->  selector.appendChild("")
-    ->  selector.insertBefore(var_name, var_name.firstChild)
+    ->  selector.insertBefore(new_element_name, old_element_name.firstChild)
     ->  selector.createElement("")
     ->  selector.createTextNode("")
     ->  selector.remove()
@@ -48,7 +48,7 @@ Examples ***
         box.appendChild(hello)
         box.insertBefore(hello, box.firstChild)
 
-    ->  document.querySelector("div").remove
+    ->  document.querySelector("div").remove()
 
     ->  hello.setAttribute("title", "A new Element")
 

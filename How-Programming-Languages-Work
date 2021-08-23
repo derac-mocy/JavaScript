@@ -1,17 +1,23 @@
 (input) High level langauge  =>  (output)  Low level langauge
-Source code  =>  Native code
+Source code     =>      Native code
+JS, java, C#           Machine Language
 
 
-Compiler (C, C#)
-Source code -> Compiler -> Intermediate Code -> Native code  (No Platform independent)
+
+Compiler (C, C#)  ***
+Source code -> Compiler -> Intermediate Code -> Native code  (No Platform independent) -> execute
 
 
-Interpreter( JS, PHP, Lua)
-Source code -> Interpreter -> Byte Code -> VM (JVM (virtual machine)/ CLR (Common Language Runtime)/ MSIL) 
 
 
-Virtual machine (Java, C++, .net)
-    (input) byte code -> VM -> native code (output)
+Interpreter( JS, PHP, Lua)  ***
+Source code -> Interpreter -> Byte Code -> VM (JVM (virtual machine)/ CLR (Common Language Runtime)/ MSIL) -> execute
+
+
+
+
+Virtual machine (Java, C++, .net, Python)   ***
+    (input) byte code -> VM -> native code (output) -> execute
 
     Scala, Kotlin
         -> Java byte code + meta data
@@ -26,18 +32,22 @@ Virtual machine (Java, C++, .net)
 
 
 Type of Virtual machine 
-    -> Stack Based
-    -> Registar Based
+    -> Stack Based VM
+    -> Register Based VM
+	
 
 
-Transpiler
-    (input) High level langauge  =>  (output) High level langauge
 
-    TypeScript  ->  JS' supersub
-    ECMA6       ->  ECMA5
+Transpiler (TypeScript, ECMA6) ***
+    (input) High level langauge  =>  (output) High level langauge   => ....
+
+    TypeScript  ->  JS' supersub    ->  Interpreter -> ...
+    ECMA6       ->  ECMA5   -> Interpreter  -> ...
 
 
-JIT/ AOT compiler
+
+
+JIT/ AOT compiler   ***
     Hotspot compilation (Java)
     Just in Time compilation - JIT (PHP)
     Ahead of Time - AOT (flutter, dart)

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        #result {
+        font-size: 2em;
+        font-weight: bold;
+        }
+
+        label {
+            display: none;
+            color: red;
+        }
+        </style>
+</head>
+<body>
+    <div class="form">
+        <div>
+            <input type="text" id="one">
+            <label for="one">Enter only digits</label>
+        </div>
+        <div>
+            <input type="text" id="two">
+            <label for="two">Enter only digits</label>
+        </div>
+        <div id="result"></div>
+        <button id="add">Add</button>
+    </div>
+
+    <script>
+        document.querySelector("#add").onclick = function() {
+            let a = parseInt(document.querySelector('#one').value)
+
+            if(isNaN(a)) {
+                document.querySelector("[for=one]").style.display = "inline"
+            }
+            
+            let b = parseInt(document.querySelector('#two').value)
+            if(isNaN(b)) {
+                document.querySelector("[for=two]").style.display = "inline"
+            }
+
+            let result = a + b
+            if(isNaN(result)) {
+                alert("Enter correct Numbers")
+            } else {
+                document.querySelector('#result').textContent = result
+            }
+        }
+
+        document.querySelector('#one').onkeyup = function() {
+            let a = parseInt(document.querySelector('#one').value)
+
+            if(Number.isInteger(a)) {
+                document.querySelector("[for=one]").style.display = "none"
+            }
+        }
+
+        document.querySelector('#two').onkeyup = function() {
+            let b = parseInt(document.querySelector('#two').value)
+
+            if(Number.isInteger(b)) {
+                document.querySelector("[for=two]").style.display = "none"
+            }
+        }
+    </script>
+</body>
+</html>
